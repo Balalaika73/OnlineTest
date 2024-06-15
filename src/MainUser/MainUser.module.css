@@ -1,0 +1,213 @@
+.container {
+    position: relative;
+    left: 3%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #404145;
+    width: 550px !important;
+    height: 100px !important;
+}
+
+
+.history-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color: #404145;
+    border-radius: 20px;
+    width: 570px;
+    height: 200px;
+    margin-top: 10px;
+}  
+
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+  .existing-content,
+  .history-chart-container {
+    flex: 1;
+    padding-right: 20px; 
+    padding-top: 20px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    
+    .container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+      background-color: #404145;
+      width: 100% !important;
+      height: auto !important;
+      }
+    
+    .existing-content,
+    .history-chart-container {
+    flex: 1;
+    padding-top: 20px;
+    width: 80%;
+    height: auto;
+    }
+
+    .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+
+    .grafContainer {
+      width: 50%;
+      height: auto;
+      position: relative;
+      margin-top: 20px;
+      background-color: #404145;
+      border-radius: 20px;
+      text-align: center;
+    } 
+  }
+
+  .textArea-design {
+    color: white;
+    font-family: 'Lucida Console';
+    font-size: 10px;
+  }
+
+  .chart-container {
+    padding: 10px 20px;
+    position: relative;
+    width: 210px;
+    height: 210px;
+    background-color: #404145;
+    border-radius: 20px;
+    overflow: hidden; /* Гарантируем скрытие содержимого, выходящего за пределы высоты */
+  }
+
+
+  .code-container {
+    padding: 10px 10px;
+    position: relative;
+    width: 330px;
+    height: 210px;
+    background-color: #404145;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+
+  .code-container textarea {
+  width: calc(100% - 10px);
+  height: calc(100% - 40px);
+  border: 2px solid #212226;
+  border-radius: 4px;
+  background-color: transparent;
+  resize: none;
+}
+
+.select-wrapper {
+  display: flex;
+  align-items: center;
+}
+  
+  .table-container {
+    margin-top: 10px;
+    overflow: auto;
+    max-height: 400px;
+    font-size: 13px;
+  }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #ffffff;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 8px;
+}
+
+th {
+    background-color: #666;
+    color: white;
+}
+
+
+.grafContainer {
+    width: 550px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #404145;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+.topLine {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.bottomLine {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    color: #5280e2;
+}
+
+.link:visited {
+    color: #3f54d1;
+}
+
+.textbox {
+    flex: 1;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    margin-right: 10px;
+    width: 200px !important;
+    height: 30px !important;
+}
+
+.button {
+    border: none;
+    border-radius: 50%;
+    background-color: #3f54d1 !important;
+    color: white;
+    cursor: pointer;
+    height: 30px !important;
+    margin-left: 10px !important;
+}
+
+.my-button {
+  border: none;
+  border-radius: 50%;
+  background-color: #3f54d1 !important;
+  color: white;
+  cursor: pointer;
+  height: 20px !important;
+  margin-left: 10px !important;
+}
+
+.my-input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    background: transparent;
+    color: white;
+}

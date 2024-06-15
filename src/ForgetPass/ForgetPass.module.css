@@ -1,0 +1,112 @@
+.my-body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(150deg, #212226, #15cdcb, #4fe0b5, #15cdcb, #212226, #212226);
+    height: 100vh;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+.hero {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(150deg, #212226, #15cdcb, #4fe0b5, #15cdcb, #212226, #212226);
+    height: 100vh;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.my-form-box{
+    width: 380px;
+    height: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #212226;
+    padding: 5px;
+    overflow: hidden;
+}
+
+
+.my-button-box {
+    width: 265px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 5px #5280e2;
+    border-radius: 30px;
+}
+
+h1{
+    font-size: 36px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+
+  .my-input-group,
+  .verify-group,
+  .changepass-group {
+    position: relative; /* Изменено на относительное позиционирование */
+    margin-top: 20px; /* Добавлен отступ сверху */
+    width: 280px;
+    margin: 0 auto;
+}
+
+.my-input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 17px;
+}
+
+.forget-btn {
+    width: 85%; /* Ширина кнопки теперь равна ширине родительского контейнера */
+    padding: 10px 0; /* Установка вертикального отступа внутри кнопки */
+    cursor: pointer;
+    margin: 20px auto 0; /* Отступ сверху, автоматический отступ слева и справа для центрирования */
+    display: block;
+    margin-top: 20px; /* Отступ сверху кнопки */
+    background: linear-gradient(to right, #5280e2, #3f54d3);
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+
+    .my-form-box {
+        width: 80%;
+        margin: 10% auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .my-input-group {
+        top: 120px; /* Или другое значение */
+    }
+
+    #login {
+        left: 50px; /* Или другое значение */
+    }
+
+    #register {
+        left: 420px; /* Или другое значение */
+    }
+}

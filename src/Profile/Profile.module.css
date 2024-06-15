@@ -1,0 +1,79 @@
+.profile-container {
+    margin: 130px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #404145;
+    height: 100%;
+}
+
+.email-container {
+    margin-top: 20px;
+    color: white;
+    font-size: 25pt;
+    text-align: center;
+}
+
+.days-container {
+    color: #666666;
+    font-size: 13pt;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.date-container {
+    margin-top: 40px;
+    color: white;
+    font-size: 15pt;
+    padding-left: 5%;
+    text-align: left;
+}
+
+.password-container {
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+    padding-left: 5%;
+    flex-direction: column;
+}
+
+.password {
+    width: 50%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+.edit-button {
+    margin: 5px 0;
+    background-color: #5280e2;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    border: 0;
+    margin-left: 5%;
+}
+
+.my-button {
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3f54d1 !important;
+    color: white;
+    padding: 3px; /* Убираем внутренний отступ */
+    cursor: pointer;
+    height: 30px !important;
+    width: 150px;
+    margin: 10px auto;
+    line-height: 30px; /* Устанавливаем высоту строки равной высоте кнопки */
+    text-align: center; /* Выравниваем текст по центру горизонтально */
+  }
