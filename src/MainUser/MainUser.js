@@ -208,41 +208,42 @@ function MainUser() {
         </div>
         <div className={styles["history-chart-container"]}>
           <div className={styles["main-container"]}>
-          <div className={styles["code-container"]}>
-            <div className={styles["topLine"]}>Написать код
-              <FormControl style={{marginLeft: '10px'}}>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={lang}
-                onChange={handleLangChange}
-                style={{ width: '100px', height: '22px', color: '#ffffff', fontSize: '15px'}}
-              >
-                <MenuItem value="Python">Python</MenuItem>
-                <MenuItem value="Java">Java</MenuItem>
-              </Select>
-              </FormControl>
-              <Button variant="contained" className={styles["my-button"]} onClick={handleRedirectMyTest}>
-                <ArrowForwardIcon />
-              </Button>
+            <div className={styles["code-container"]}>
+              <div className={styles["topLine"]}>Написать код
+                <FormControl style={{marginLeft: '10px'}}>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={lang}
+                    onChange={handleLangChange}
+                    style={{ width: '100px', height: '22px', color: '#ffffff', fontSize: '15px'}}
+                  >
+                  <MenuItem value="Python">Python</MenuItem>
+                  <MenuItem value="Java">Java</MenuItem>
+                  </Select>
+                </FormControl>
+                <Button variant="contained" className={styles["my-button"]} onClick={handleRedirectMyTest}>
+                  <ArrowForwardIcon />
+                </Button>
+              </div>
+              <textarea rows="4" cols="50" className={styles["textArea-design"]} 
+                style={{ overflowX: 'auto', whiteSpace: 'pre-wrap', wordWrap: 'break-word'}}
+                value={script}
+                onChange={(e) => setScript(e.target.value)}
+                onKeyDown={handleKeyDown}
+              />
             </div>
-            <textarea rows="4" cols="50" className={styles["textArea-design"]} 
-            style={{ overflowX: 'auto', whiteSpace: 'pre-wrap', wordWrap: 'break-word'}}
-            value={script}
-            onChange={(e) => setScript(e.target.value)}
-            onKeyDown={handleKeyDown}/>
-          </div>
             <div className={styles["chart-container"]}>
-            <div className={styles["topLine"]}>Результат тестов </div>
-            <div className={styles["bottomLine"]}>
+              <div className={styles["topLine"]}>Результат тестов </div>
+              <div className={styles["bottomLine"]}>
                 <Pie data={data} options={options} />
+              </div>
             </div>
-        </div>
-    </div>
+          </div>
           <div className={styles["history-container"]}>
             <div className={styles["topLine"]}>История тестов</div>
             <div className={styles["table-container"]}>
-            <table>
+              <table>
               <thead>
                 <tr>
                   <th>Дата</th>
@@ -270,9 +271,9 @@ function MainUser() {
                   );
                 })}
               </tbody>
-            </table>
+              </table>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>

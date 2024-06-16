@@ -26,12 +26,12 @@ const ChartComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const testsResponse = await fetch("http://localhost:9090/code/countThreeMonths");
+        const testsResponse = await fetch("http://localhost:8080/code/countThreeMonths");
         const testsData = await testsResponse.json();
         console.log(testsData);
         setTestsData(testsData);
 
-        const usersResponse = await fetch("http://localhost:9090/person/countThreeMonths");
+        const usersResponse = await fetch("http://localhost:8080/person/countThreeMonths");
         const usersData = await usersResponse.json();
         setUsersData(usersData);
       } catch (error) {

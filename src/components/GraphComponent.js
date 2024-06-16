@@ -88,12 +88,12 @@ function GraphComponent() {
       };
       
     return (
-      <div className="GraphComponentContainer">
-      <h2 style={titleStyle}>Статистика тестов пользователя</h2>
-        <div className="GraphComponent" style={{ height: '220px', margin: '0 auto' }}>
-          <Line data={data} options={options}></Line>
-        </div>
+      <div className="GraphComponentContainer" style={{ height: '80%', width: '100%' }}>
+      <h2 style={{ color: 'white' }}>Статистика тестов пользователя</h2>
+      <div className="GraphComponent" style={{ height: '80%', width: '100%', margin: '0 auto' }}>
+        <Line data={data} options={options} />
       </div>
+    </div>
   
     );
 }
