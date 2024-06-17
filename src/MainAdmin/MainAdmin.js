@@ -40,7 +40,7 @@ function MainAdmin() {
         const token = localStorage.getItem('token');
         checkToken();
 
-        fetch(`http://localhost:8080/admin/deleteUser/${userId}`, {
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/admin/deleteUser/${userId}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -70,7 +70,7 @@ function MainAdmin() {
     
         checkToken();
     
-        fetch("http://localhost:8080/admin/getLogs", {
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/admin/getLogs`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -92,7 +92,7 @@ function MainAdmin() {
     
         checkToken();
     
-        fetch("http://localhost:8080/admin/getAllUsers", {
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/admin/getAllUsers`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

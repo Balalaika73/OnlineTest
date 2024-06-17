@@ -64,7 +64,7 @@ function TestFile() {
         /*setProgress(prevState => {
             return {...prevState, started: true}
         })*/
-        fetch('http://localhost:8080/code/python/getExcel', {
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/code/python/getExcel`, {
             method: "POST",
             body: fd,
             /*onUploadProgress: (progressEvent) => {setProgress(prevState => {
@@ -108,7 +108,7 @@ function TestFile() {
         checkToken();
 
         if (dataCode !== '') {
-            fetch(`http://localhost:8080/code/getUserCode`, {
+            fetch(`${process.env.REACT_APP_API_BASE_URL}/code/getUserCode`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -130,7 +130,7 @@ function TestFile() {
             });
 
             if (typeCode === 'Python'){
-                fetch(`http://localhost:8080/code/python/getUserVar`, {
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/code/python/getUserVar`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -158,7 +158,7 @@ function TestFile() {
                 });
             }
             else if (typeCode === 'Java'){
-                fetch(`http://localhost:8080/code/java/getUserVar`, {
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/code/java/getUserVar`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -188,7 +188,7 @@ function TestFile() {
         }
         else {
             if(fileName && fileName.endsWith('.java')) {
-                fetch(`http://localhost:8080/code/java/getVar`, {
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/code/java/getVar`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -216,7 +216,7 @@ function TestFile() {
                 });
             }
             else if(fileName && fileName.endsWith('.py')) {
-                fetch(`http://localhost:8080/code/python/getVar`, {
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/code/python/getVar`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -244,7 +244,7 @@ function TestFile() {
                 });
             }
     
-            fetch(`http://localhost:8080/code/getCode`, {
+            fetch(`${process.env.REACT_APP_API_BASE_URL}/code/getCode`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -318,7 +318,7 @@ function TestFile() {
 
         if (dataCode !== '') {
             if (typeCode === 'Python') {
-                fetch(`http://localhost:8080/excel/downloadUserVarsPython`, {
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/excel/downloadUserVarsPython`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -346,7 +346,7 @@ function TestFile() {
                 });
             }
             else if (typeCode === 'Java') {
-                fetch(`http://localhost:8080/excel/downloadUserVarsJava`, {
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/excel/downloadUserVarsJava`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -376,7 +376,7 @@ function TestFile() {
         } 
         else {
             if(fileName.endsWith('.py')) {
-                fetch(`http://localhost:8080/excel/downloadVarsPython`, {
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/excel/downloadVarsPython`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -404,7 +404,7 @@ function TestFile() {
                 });
             }
             else if (fileName.endsWith('.java')) {
-                fetch(`http://localhost:8080/excel/downloadVarsJava`, {
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/excel/downloadVarsJava`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -462,7 +462,7 @@ function TestFile() {
             };
             setLoading(true);
             if(typeCode === 'Python') {
-                fetch(`http://localhost:8080/code/python/runUserCode`, {
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/code/python/runUserCode`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -484,7 +484,7 @@ function TestFile() {
                 });
             }
             else if (typeCode === 'Java') {
-                fetch(`http://localhost:8080/code/java/runUserCode`, {
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/code/java/runUserCode`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -514,7 +514,7 @@ function TestFile() {
             setLoading(true);
             console.log(codeRun);
             if(fileName.endsWith('.py')) {
-                fetch(`http://localhost:8080/code/python/runCode`, {
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/code/python/runCode`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -536,7 +536,7 @@ function TestFile() {
                 });
             }
             else if (fileName.endsWith('.java')) {
-                fetch(`http://localhost:8080/code/java/runCode`, {
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/code/java/runCode`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -576,7 +576,7 @@ function TestFile() {
         if (dataCode !== '') {
             if (typeCode === 'Python') {
                 formData.append('userCode.code', dataCode);  
-                fetch(`http://localhost:8080/excel/uploudUserVarsPython`,{
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/excel/uploudUserVarsPython`,{
                 method: "POST",
                 headers: {
                     "Custom-Header": "value",
@@ -610,7 +610,7 @@ function TestFile() {
             }
             else if (typeCode === 'Java') {
                 formData.append('userCode.code', dataCode);  
-                fetch(`http://localhost:8080/excel/uploudUserVarsJava`,{
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/excel/uploudUserVarsJava`,{
                 method: "POST",
                 headers: {
                     "Custom-Header": "value",
@@ -647,7 +647,7 @@ function TestFile() {
             formData.append('codeRequest.urlCode', rawURL);        
             setMsg("Uploading...");
             if(fileName.endsWith('.py')) {
-                fetch(`http://localhost:8080/excel/uploudVarsPython`,{
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/excel/uploudVarsPython`,{
                 method: "POST",
                 headers: {
                     "Custom-Header": "value",
@@ -680,7 +680,7 @@ function TestFile() {
                 });
             }
             else if (fileName.endsWith('.java')) {
-                fetch(`http://localhost:8080/excel/uploudVarsJava`,{
+                fetch(`${process.env.REACT_APP_API_BASE_URL}/excel/uploudVarsJava`,{
                 method: "POST",
                 headers: {
                     "Custom-Header": "value",

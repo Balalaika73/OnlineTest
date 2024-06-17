@@ -58,7 +58,7 @@ function GraphComponent() {
     const token = localStorage.getItem('token');
 
     useEffect(() => {
-      fetch(`http://localhost:8080/code/countUserTestsThreeMonths`, {
+      fetch(`${process.env.REACT_APP_API_BASE_URL}/code/countUserTestsThreeMonths`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

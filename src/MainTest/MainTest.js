@@ -44,7 +44,7 @@ function MainTest() {
         
         checkToken();
 
-        fetch(`http://localhost:8080/code/getRepoFiles`, {
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/code/getRepoFiles`, {
             method: "POST",
             headers: { 
                 "Content-Type": "application/json",

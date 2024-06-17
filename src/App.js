@@ -40,7 +40,7 @@ export const decodeToken = (token) => {
 export const refreshAccessToken = () => {
   const refreshToken = localStorage.getItem('refreshToken');
 
-  fetch("http://localhost:8080/person/refreshToken", {
+  fetch(`${process.env.REACT_APP_API_BASE_URL}/person/refreshToken`, {
       method: "POST",
       headers: {
           "Content-Type": "application/json",

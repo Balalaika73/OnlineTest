@@ -25,7 +25,7 @@ function AddUser() {
         const token = localStorage.getItem('token');
         const data = { email, role };
 
-        fetch(`http://localhost:8080/admin/registerUser`, {
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/admin/registerUser`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
