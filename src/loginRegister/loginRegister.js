@@ -74,7 +74,7 @@ function Login() {
         e.preventDefault();
         const user = { email: loginEmail, password: loginPass };
         console.log(user);
-        fetch("http://localhost:8080/person/signIn", {
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/person/signIn`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(user)
@@ -105,7 +105,7 @@ function Login() {
         }
         const user = { email: registerEmail, password: registerPass, repeatPassword: confirmPass };
         console.log(user);
-        fetch("http://localhost:8080/person/signUp", {
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/person/signUp`, {
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(user)

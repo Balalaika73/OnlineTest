@@ -108,7 +108,7 @@ function MainUser() {
   const handleRedirectMyTest = () => {
     if (script !== '') {
       const token = localStorage.getItem('token');
-    fetch('http://localhost:8080/code/getUserCode', {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/code/getUserCode`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -129,7 +129,7 @@ function MainUser() {
   useEffect(() => {
     const token = localStorage.getItem('token');
     fetchTestHistory();
-    fetch('http://localhost:8080/code/getTestResults', {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/code/getTestResults`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -157,7 +157,7 @@ function MainUser() {
 
     checkToken();
 
-    fetch("http://localhost:8080/code/getTestsHistory", {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/code/getTestsHistory`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",

@@ -39,7 +39,7 @@ function Profile() {
         setIsChangingEmail(false);
         const data = { newemail: newEmail };
         const token = localStorage.getItem('token');
-        fetch(`http://localhost:8080/person/changeEmail`,{
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/person/changeEmail`,{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -70,7 +70,7 @@ function Profile() {
         notify();
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:8080/person/changePass`, {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/person/changePass`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -116,7 +116,7 @@ function Profile() {
                 // Параллельно выполняем обновление токена и основной запрос
                 const [newToken, profileInfoResponse] = await Promise.all([
                     refreshAccessToken(), // Вызываем функцию обновления токена
-                    fetch(`http://localhost:8080/person/getProfileInfo`, {
+                    fetch(`${process.env.REACT_APP_API_BASE_URL}/person/getProfileInfo`, {
                         method: "GET",
                         headers: {
                             "Content-Type": "application/json",
@@ -165,7 +165,7 @@ function Profile() {
     const saveNewPass = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:8080/changePass`, {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/changePass`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

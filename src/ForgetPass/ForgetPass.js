@@ -17,7 +17,7 @@ function ForgetPassword() {
         e.preventDefault();
         console.log(email);
         try {
-            const response = await fetch("http://localhost:8080/person/sendEmailCode", {
+            const response = await fetch("${process.env.REACT_APP_API_BASE_URL}/person/sendEmailCode", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email }) // Здесь оборачиваем email в объект JSON
@@ -38,7 +38,7 @@ function ForgetPassword() {
         e.preventDefault();
         console.log(email);
         try {
-            const response = await fetch("http://localhost:8080/person/verifyCode", {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/person/verifyCode`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -74,7 +74,7 @@ function ForgetPassword() {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:8080/person/changePass`, {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/person/changePass`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
